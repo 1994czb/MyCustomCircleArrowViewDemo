@@ -34,4 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public void slow(View view) {
         myCustomCircleArrowView.slowDown();
     }
+
+    public void pause(View view) {
+        myCustomCircleArrowView.pause();
+    }
 }

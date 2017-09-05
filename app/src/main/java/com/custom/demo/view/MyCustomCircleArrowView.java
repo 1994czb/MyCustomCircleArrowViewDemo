@@ -117,10 +117,13 @@ public class MyCustomCircleArrowView extends View {
         //箭头旋转的角度
         currentDegree+=1*currentSpeed;
         //每旋转一次都要重新绘制
-        invalidate();
+        if (!isPause) {
+            invalidate();
+        }
     }
 
     private int currentSpeed=1;
+    private boolean isPause = false;
     //加速
     public void speed(){
         currentSpeed++;
@@ -130,6 +133,16 @@ public class MyCustomCircleArrowView extends View {
         currentSpeed--;
         if (currentSpeed==1){
             currentSpeed=1;
+        }
+    }
+
+    public void pause() {
+        //如果是开始状态的话去重新绘制
+        if (isPause) {
+            isPause = !isPause;
+            invalidate();
+        } else {
+            isPause = !isPause;
         }
     }
 }

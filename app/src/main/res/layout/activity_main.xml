@@ -26,6 +26,13 @@
         android:layout_height="wrap_content"
         android:text="减速"
         android:onClick="slow"/>
+    <Button
+    android:id="@+id/pause"
+    android:layout_below="@id/slow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="暂停"
+    android:onClick="pause"/>
 
     <com.custom.demo.view.MyCustomCircleArrowView
         android:layout_below="@id/set_color_btn"
